@@ -128,53 +128,39 @@ main {
   top: 80px;
 }
 
-.stories img {
-  width: 66px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 5px;
-}
-
-.stories div {
+.story {
   display: flex;
+  width: 78px;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
-  flex-shrink: 0;
   align-items: center;
-  
-  width: 77px;
+  gap: 5px;
+  flex-shrink: 0;
+  padding: 14px 0;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-.stories p {
+.stories-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+  width: 66px;
+  background-image: url('./images/story-circle.svg');
+}
+
+.story .usuario {
+  width: 78px;
+  overflow: hidden;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-}
-
-.pic1 img {
-  background-image: url("/images/9gag 1.png");
-}
-.pic2 img {
-  background-image: url("/images/meowed 1.png");
-}
-.pic3 img {
-  background-image: url("/images/barked 1.png");
-}
-.pic4 img {
-  background-image: url("/images/nathanwpylestrangeplanet 1.png");
-}
-.pic5 img {
-  background-image: url("/images/wawawiwacomicsa 1.png");
-}
-.pic6 img {
-  background-image: url("/images/respondeai 1.png");
-}
-.pic7 img {
-  background-image: url("/images/filomoderna 1.png");
-}
-.pic8 img {
-  background-image: url("/images/memeriagourmet 1.png");
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 14px;
 }
 
 .post {
@@ -391,12 +377,24 @@ h1:hover {
 .sidebar-username h1 {
   margin-bottom: 2px;
 }
-.sugestoes {
+
+.nome-user {
+  display: flex;
+  gap: 7px;
+  font-weight: 300;
+  color: #8E8E8E;
+}
+
+.nome-user ion-icon {
+  font-size: 16px;
+}
+
+.sugestoes-title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 17px;
 }
-.sugestoes h1 {
+.sugestoes-title h1 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -404,7 +402,7 @@ h1:hover {
   color: #8e8e8e;
 }
 
-.sugestoes p {
+.sugestoes-title p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
