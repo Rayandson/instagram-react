@@ -225,14 +225,14 @@ main {
 .content ion-icon {
   font-size: 22px;
 }
-.like {
+/* .like {
   position: relative;
   
-}
+} */
 
 .like-red {
-  position: absolute;
-  color: #ed4956;
+  /* position: absolute; */
+  color: red;
 }
 
 

@@ -17,6 +17,13 @@ export default function Post(props) {
       setContador(contador - 1)
     }
   }
+  function likeImagem() {
+    if(outline === "-outline") {
+      setOutline("")
+      setVermelho("")
+      setContador(contador + 1)
+  }
+}
     return (
       <div className="post">
         <div className="post-title">
@@ -29,12 +36,12 @@ export default function Post(props) {
           </div>
         </div>
         <img
-          className="post-image"
+          className="post-image" onClick={likeImagem}
           src={props.imagem} alt="imagem do post"/>
         <div className="post-icons">
           <div>
             <div className="coracoes">
-              <ion-icon class={`${vermelho} like`} onClick={like} name={`heart${outline}`}></ion-icon>
+              <ion-icon class={`${vermelho}`} onClick={like} name={`heart${outline}`}></ion-icon>
             </div>
             {/* Linkando ícone à caixa de texto */}
             <label for="comment-box1">
