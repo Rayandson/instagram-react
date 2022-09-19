@@ -1,3 +1,4 @@
+
 export default function NavBar() {
     return (
       <div class="cabeçalho">
@@ -16,7 +17,8 @@ export default function NavBar() {
           <ion-icon name="paper-plane-outline"></ion-icon>
           <ion-icon name="compass-outline"></ion-icon>
           <ion-icon name="heart-outline"></ion-icon>
-          <img id="mini-photo" src="/images/Eu insta.jpeg" alt="" />
+          <ion-icon name="person-outline"></ion-icon>
+          {/* <img id="mini-photo" src="/images/Eu insta.jpeg" alt="" /> */}
         </div>
       </div>
     );
