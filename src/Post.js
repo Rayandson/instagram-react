@@ -3,6 +3,20 @@ import React, {useState} from "react"
 export default function Post(props) {
 
   let[contador, setContador] = useState(props.likes)
+  let[vermelho, setVermelho] = useState("")
+  let[outline, setOutline] = useState("-outline")
+
+  function like() {
+    if(outline === "-outline") {
+      setOutline("")
+      setVermelho("")
+      setContador(contador + 1)
+    } else {
+      setOutline("-outline")
+      setVermelho("")
+      setContador(contador - 1)
+    }
+  }
     return (
       <div className="post">
         <div className="post-title">
@@ -20,7 +34,7 @@ export default function Post(props) {
         <div className="post-icons">
           <div>
             <div className="coracoes">
-              <ion-icon className="mouse-color" onClick={() => setContador(contador + 1)} name="heart-outline"></ion-icon>
+              <ion-icon class={`${vermelho} like`} onClick={like} name={`heart${outline}`}></ion-icon>
             </div>
             {/* Linkando ícone à caixa de texto */}
             <label for="comment-box1">
